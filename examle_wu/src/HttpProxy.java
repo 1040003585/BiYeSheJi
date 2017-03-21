@@ -3,8 +3,8 @@ import java.net.ServerSocket;
 
 public class HttpProxy {
 
-	private ServerSocket myServerSocket;
-	private Thread myThread;
+	private ServerSocket myServerSocket; // 服务器Socket
+	private Thread myThread; // 链接Daemon线程
 
 	public HttpProxy(int port) throws IOException {
 		myServerSocket = new ServerSocket(port);
@@ -15,8 +15,12 @@ public class HttpProxy {
 				// TODO Auto-generated method stub
 				while (true) {
 					try {
+						System.out.println("[+] HttpProxy.HttpProxy()"
+								+ myThread.getId());
+						// 等待HTTP会话链接，建立客户端Socket连接
 						new HTTPSession(myServerSocket.accept());
-						System.out.println("HttpProxy.HttpProxy()");
+						System.out.println("[-] HttpProxy.HttpProxy()"
+								+ myThread.getId());
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -25,6 +29,7 @@ public class HttpProxy {
 			}
 
 		});
+		// 设置链接线程为Daemon线程，并启动。
 		myThread.setDaemon(true);
 		myThread.start();
 	}
@@ -36,7 +41,7 @@ public class HttpProxy {
 	 */
 	public static void main(String[] args) {
 		try {
-			new HttpProxy(8888);
+			new HttpProxy(4444); // 启动代理服务器的端口
 		} catch (IOException e1) {
 			System.err.println("Couldn't start server:\n" + e1);
 			System.exit(-1);

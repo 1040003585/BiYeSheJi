@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490082997468
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083001234
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.paste,1490083001781
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083003078
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083003468
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083004218
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083006656
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083010625
+started,bundle,org.eclipse.wst.jsdt.manipulation,1.0.1.v200807241900,org.eclipse.wst.jsdt.manipulation,1490083011796
+started,bundle,org.eclipse.wst.jsdt.core,1.0.104.v200901281939,org.eclipse.wst.jsdt.core,1490083012140
+started,bundle,org.eclipse.wst.jsdt.ui,1.0.104.v200901290004,org.eclipse.wst.jsdt.ui,1490083012296
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083012531
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083016140
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083020890
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083021703
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.delete,1490083021750
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083025500
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.paste,1490083025906
+no handler,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.undo,1490083027453
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.paste,1490083029250
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083041656
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083044156
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.cut,1490083048500
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.paste,1490083050531
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490083054515

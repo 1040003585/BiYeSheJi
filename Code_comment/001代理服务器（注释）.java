@@ -126,9 +126,7 @@ public class HttpProxy {
   private int findHeaderEnd(final byte[] buf, int rlen) {
    int splitbyte = 0;
    while (splitbyte + 3 < rlen) {
-    if (buf[splitbyte] == '\r' && buf[splitbyte + 1] == '\n'
-      && buf[splitbyte + 2] == '\r'
-      && buf[splitbyte + 3] == '\n')
+    if (buf[splitbyte] == '\r' && buf[splitbyte + 1] == '\n' && buf[splitbyte + 2] == '\r' && buf[splitbyte + 3] == '\n')
      return splitbyte + 4;
     splitbyte++;
    }
