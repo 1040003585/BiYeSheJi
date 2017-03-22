@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+opened,view,org.eclipse.ui.ide,3.4.2.M20090127-1700,org.eclipse.ui.views.ProblemView,1490157751562
+executed,command,,,AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction,1490157751562
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490157756375
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490157758453
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.delete,1490157768468
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.delete,1490157768937
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.delete,1490157769218
+executed,command,org.eclipse.jdt.ui,3.4.2.r342_v20090107-0800,org.eclipse.jdt.ui.edit.text.java.format,1490157771359
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.delete,1490157886500
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.copy,1490157996500
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.paste,1490158000156
+no handler,command,org.eclipse.datatools.sqltools.result,,org.eclipse.datatools.sqltools.result.removeAllInstances,1490158011984
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.delete,1490158013093
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.undo,1490158014109
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.undo,1490158014609
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.delete,1490158016859
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490158118437
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490158119125
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.file.save,1490158200593
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490158261500
+activated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490158263171
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.cut,1490158445484
+executed,command,org.eclipse.ui,3.4.2.M20090204-0800,org.eclipse.ui.edit.paste,1490158446359
+executed,command,org.eclipse.ui.workbench.texteditor,3.4.1.r341_v20080827-1100,org.eclipse.ui.edit.text.goto.wordNext,1490158446406
+deactivated,workbench,org.eclipse.ui.workbench,3.4.2.M20090127-1700,,1490158569281

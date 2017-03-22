@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="27" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
 <window height="738" maximized="true" width="1133" x="136" y="-5">
 <fastViewData fastViewLocation="1024"/>
@@ -21,6 +21,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="183" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -28,34 +29,39 @@
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1487835169625" focus="true" label="Workspace - Java">
 <editors>
-<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@1d5b28d">
-<info part="DefaultEditorWorkbook">
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="org.eclipse.ui.internal.EditorStack@ad8f8d">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.internal.EditorStack@1d5b28d" ratio="0.4992722" ratioLeft="343" ratioRight="344" relationship="2" relative="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook" ratio="0.40646854" ratioLeft="465" ratioRight="679" relationship="2" relative="org.eclipse.ui.internal.EditorStack@ad8f8d">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="1"/>
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpProxy.java" partName="HttpProxy.java" path="E:/毕业设计/MyJavaProxy_workspaces/example/src/HttpProxy.java" title="HttpProxy.java" tooltip="example/src/HttpProxy.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/example/src/HttpProxy.java"/>
-<editorState selectionLength="0" selectionOffset="1455"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HTTPSession.java" partName="HTTPSession.java" path="E:/毕业设计/MyJavaProxy_workspaces/examle_wu/src/HTTPSession.java" title="HTTPSession.java" tooltip="examle_wu/src/HTTPSession.java" workbook="org.eclipse.ui.internal.EditorStack@1d5b28d">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/examle_wu/src/HTTPSession.java"/>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="data2.txt" partName="data2.txt" path="E:/毕业设计/BiYeSheJi/developing/src/data2.txt" title="data2.txt" tooltip="developing/src/data2.txt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/developing/src/data2.txt"/>
 <editorState selectionLength="0" selectionOffset="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpProxy.java" partName="HttpProxy.java" path="E:/毕业设计/MyJavaProxy_workspaces/examle_wu/src/HttpProxy.java" title="HttpProxy.java" tooltip="examle_wu/src/HttpProxy.java" workbook="org.eclipse.ui.internal.EditorStack@1d5b28d">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/examle_wu/src/HttpProxy.java"/>
-<editorState selectionLength="0" selectionOffset="90"/>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="data1.txt" partName="data1.txt" path="E:/毕业设计/BiYeSheJi/developing/src/data1.txt" title="data1.txt" tooltip="developing/src/data1.txt" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/developing/src/data1.txt"/>
+<editorState selectionLength="0" selectionOffset="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HTTPSession.java" partName="HTTPSession.java" path="E:/毕业设计/BiYeSheJi/developing/src/HTTPSession.java" title="HTTPSession.java" tooltip="developing/src/HTTPSession.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/developing/src/HTTPSession.java"/>
+<editorState selectionLength="0" selectionOffset="4134"/>
+</editor>
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpProxy.java" partName="HttpProxy.java" path="E:/毕业设计/BiYeSheJi/example/src/HttpProxy.java" title="HttpProxy.java" tooltip="example/src/HttpProxy.java" workbook="org.eclipse.ui.internal.EditorStack@ad8f8d">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/example/src/HttpProxy.java"/>
+<editorState selectionLength="8" selectionOffset="3229"/>
 </editor>
 </editors>
 <views>
@@ -65,8 +71,6 @@
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Errors (1 item)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -108,14 +112,6 @@
 <child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
-</viewState>
-</view>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
-<viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
-<org.eclipse.mylyn.tasklist.ui.views.tasklist.sortIndex>
-<sorter sortDirection="1" sortIndex="0"/>
-<sorter2 sortDirection="1" sortIndex="2"/>
-</org.eclipse.mylyn.tasklist.ui.views.tasklist.sortIndex>
 </viewState>
 </view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
@@ -286,13 +282,16 @@
 <perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.jdt.ui.TypeHierarchy"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.jdt.ui.JavadocView"/>
-<view id="org.eclipse.jdt.ui.SourceView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29888713"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
@@ -315,40 +314,31 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.12177122" ratioLeft="165" ratioRight="1190" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.79288024" ratioLeft="490" ratioRight="128" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
-<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info part="org.eclipse.ui.editorss" ratio="0.15662651" ratioLeft="208" ratioRight="1120" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.5415335" ratioLeft="339" ratioRight="287" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@84a213" ratio="0.74975467" ratioLeft="764" ratioRight="255" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.mylyn.tasks.ui.views.tasks" appearance="2" expanded="2">
-<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.49893844" ratioLeft="235" ratioRight="236" relationship="4" relative="org.eclipse.ui.internal.ViewStack@84a213">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -358,163 +348,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/example/src/HttpProxy.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/examle_wu/src/HttpProxy.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/examle_wu/src/HTTPSession.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=examle_wu/D:\/Program Files\/Java\/jdk1.7.0_45\/jre\/lib\/rt.jar&lt;java.lang(Thread.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/example/src/HttpProxy.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/examle_wu/src/HTTPSession.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/examle_wu/src/HttpProxy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/examle_wu/src/data1.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/examle_wu/src/data2.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/example/src/HttpProxy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/developing/src/HTTPSession.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/examle_wu/src/HttpProxy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/developing/src/data2.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/developing/src/data1.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/developing/src/HttpProxy.java"/>
 </editors>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="207" y="0"/>
+<item historyLabel="HttpProxy.java" index="1">
+<position info="not_deleted" x="490" y="0"/>
 </item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="209" y="0"/>
+<item historyLabel="HTTPSession.java" index="0">
+<position info="not_deleted" x="2581" y="0"/>
 </item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="265" y="0"/>
+<item historyLabel="data1.txt" index="2">
+<position info="not_deleted" x="900" y="0"/>
 </item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="265" y="0"/>
+<item historyLabel="data2.txt" index="3">
+<position info="not_deleted" x="418" y="0"/>
+</item>
+<item historyLabel="data1.txt" index="2">
+<position info="not_deleted" x="494" y="0"/>
 </item>
 <item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="337" y="0"/>
+<position info="not_deleted" x="490" y="0"/>
 </item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="265" y="0"/>
+<item historyLabel="HTTPSession.java" index="0">
+<position info="not_deleted" x="681" y="0"/>
 </item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="337" y="0"/>
+<item historyLabel="data1.txt" index="2">
+<position info="not_deleted" x="494" y="0"/>
 </item>
-<item historyLabel="HttpProxy.java" index="0">
-<position info="not_deleted" x="264" y="9"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="265" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="0">
-<position info="not_deleted" x="5226" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="265" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="21" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="265" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="772" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="772" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="387" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="772" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="387" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="361" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="347" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="602" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="251" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="602" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="251" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="1">
-<position info="not_deleted" x="685" y="0"/>
-</item>
-<item historyLabel="Thread.class" index="3">
-<position info="not_deleted" x="49272" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="2">
-<position info="not_deleted" x="242" y="0"/>
-</item>
-<item historyLabel="Thread.class" index="3">
-<position info="not_deleted" x="53349" y="9"/>
+<item historyLabel="HTTPSession.java" index="0">
+<position info="not_deleted" x="681" y="0"/>
 </item>
 <item historyLabel="HttpProxy.java" index="4">
 <position/>
 </item>
 <item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="331" y="0"/>
+<position info="not_deleted" x="2420" y="0"/>
 </item>
-<item historyLabel="HttpProxy.java" index="6">
-<position info="not_deleted" x="931" y="0"/>
-</item>
+<item historyLabel="HttpProxy.java" index="6"/>
 <item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="75" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="6">
-<position/>
-</item>
-<item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="75" y="0"/>
+<position info="not_deleted" x="2420" y="0"/>
 </item>
 <item historyLabel="HttpProxy.java" index="4">
 <position/>
 </item>
-<item historyLabel="Thread.class" index="3">
-<position info="not_deleted" x="3" y="0"/>
+<item historyLabel="data2.txt" index="7">
+<position/>
+</item>
+<item historyLabel="data1.txt" index="8">
+<position/>
+</item>
+<item historyLabel="HttpProxy.java" index="9">
+<position/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position/>
+</item>
+<item historyLabel="HttpProxy.java" index="9">
+<position/>
 </item>
 <item historyLabel="HttpProxy.java" index="4">
-<position info="not_deleted" x="1455" y="0"/>
+<position/>
 </item>
-<item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="75" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="4">
-<position info="not_deleted" x="1455" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="720" y="0"/>
-</item>
-<item historyLabel="HttpProxy.java" index="6">
-<position info="not_deleted" x="90" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="720" y="0"/>
+<item historyLabel="HttpProxy.java" index="9">
+<position/>
 </item>
 <item historyLabel="HttpProxy.java" index="4">
-<position info="not_deleted" x="1455" y="0"/>
+<position/>
 </item>
 <item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="580" y="11"/>
+<position/>
 </item>
 <item historyLabel="HttpProxy.java" index="4">
-<position info="not_deleted" x="1455" y="0"/>
+<position/>
 </item>
 <item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="601" y="0"/>
-</item>
-<item historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="720" y="0"/>
+<position/>
 </item>
 <item historyLabel="HttpProxy.java" index="4">
-<position info="not_deleted" x="1455" y="0"/>
+<position/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="2990" y="0"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="2461" y="4"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="3814" y="0"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="3275" y="1059"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="3814" y="0"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="4047" y="0"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="5187" y="0"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="1939" y="0"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="2760" y="0"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="4828" y="9"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="3620" y="2"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="4828" y="9"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="3620" y="2"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="4828" y="9"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="3620" y="2"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="3975" y="8"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="3229" y="8"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="3159" y="0"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="3229" y="8"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="2944" y="0"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="3229" y="8"/>
+</item>
+<item historyLabel="HTTPSession.java" index="5">
+<position info="not_deleted" x="2883" y="0"/>
+</item>
+<item historyLabel="HttpProxy.java" index="4">
+<position info="not_deleted" x="3229" y="8"/>
 </item>
 <item active="true" historyLabel="HTTPSession.java" index="5">
-<position info="not_deleted" x="515" y="0"/>
+<position info="not_deleted" x="2883" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -522,6 +513,12 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -529,10 +526,47 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HTTPSession.java" tooltip="developing/src/HTTPSession.java">
+<persistable path="/developing/src/HTTPSession.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpProxy.java" tooltip="developing/src/HttpProxy.java">
+<persistable path="/developing/src/HttpProxy.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="data1.txt" tooltip="developing/src/data1.txt">
+<persistable path="/developing/src/data1.txt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="data2.txt" tooltip="developing/src/data2.txt">
+<persistable path="/developing/src/data2.txt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="data1" tooltip="examle_wu/src/data1">
+<persistable path="/examle_wu/src/data1"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="testHost/src/Main.java">
+<persistable path="/testHost/src/Main.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="main.java" tooltip="examle_wu/src/main.java">
+<persistable path="/examle_wu/src/main.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="getHostAddress.java" tooltip="test_ip_and_host/src/_2_2根据域名查找IP地址/_2_2_1getHostAddress方法/getHostAddress.java">
+<persistable path="/test_ip_and_host/src/_2_2根据域名查找IP地址/_2_2_1getHostAddress方法/getHostAddress.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InetAddress_wu.java" tooltip="test_ip_and_host/src/_2_1创建InetAddreess对象/InetAddress_wu.java">
+<persistable path="/test_ip_and_host/src/_2_1创建InetAddreess对象/InetAddress_wu.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="_2_getByName.java" tooltip="test_ip_and_host/src/_2_2根据域名查找IP地址/_2_1_2getByName方法/_2_getByName.java">
+<persistable path="/test_ip_and_host/src/_2_2根据域名查找IP地址/_2_1_2getByName方法/_2_getByName.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="_1_getLocalHost.java" tooltip="test_ip_and_host/src/_2_1创建InetAddreess对象/_2_1_1getLocalHost方法/_1_getLocalHost.java">
+<persistable path="/test_ip_and_host/src/_2_1创建InetAddreess对象/_2_1_1getLocalHost方法/_1_getLocalHost.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Host.java" tooltip="examle_wu/src/Host.java">
+<persistable path="/examle_wu/src/Host.java"/>
+</file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Thread.class" tooltip="java.lang.Thread">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=examle_wu/D:\/Program Files\/Java\/jdk1.7.0_45\/jre\/lib\/rt.jar&lt;java.lang(Thread.class"/>
 </file>
@@ -541,9 +575,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpProxy.java" tooltip="examle_wu/src/HttpProxy.java">
 <persistable path="/examle_wu/src/HttpProxy.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpProxy.java" tooltip="example/src/HttpProxy.java">
-<persistable path="/example/src/HttpProxy.java"/>
 </file>
 </mruList>
 </workbench>

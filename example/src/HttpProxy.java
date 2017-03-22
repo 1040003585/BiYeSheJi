@@ -9,7 +9,7 @@ import java.net.Socket;
 
 public class HttpProxy {
 	static long threadCount = 0;
-	int myTcpPort = 8089;
+	int myTcpPort = 4444;
 	private ServerSocket myServerSocket;
 	private Thread myThread;
 
@@ -193,7 +193,7 @@ public class HttpProxy {
 			System.err.println("Couldn't start server:\n" + ioe);
 			System.exit(-1);
 		}
-		System.out.println("start!");
+		System.out.println("start!1");
 		try {
 			System.in.read();
 		} catch (Throwable t) {

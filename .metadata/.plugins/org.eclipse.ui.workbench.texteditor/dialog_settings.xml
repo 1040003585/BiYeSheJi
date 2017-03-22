@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="275" key="DIALOG_WIDTH"/>
-		<item value="137" key="DIALOG_Y_ORIGIN"/>
+		<item value="114" key="DIALOG_Y_ORIGIN"/>
 		<item value="355" key="DIALOG_HEIGHT"/>
-		<item value="550" key="DIALOG_X_ORIGIN"/>
+		<item value="406" key="DIALOG_X_ORIGIN"/>
 		<item value="1|宋体|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|宋体" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,11 +13,18 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="HttpProxy" key="selection"/>
+		<item value="[-] HttpProxy.HttpProxy():End ID: " key="selection"/>
 		<list key="findhistory">
+			<item value="[-] HttpProxy.HttpProxy()"/>
+			<item value="[+] HttpProxy.HttpProxy()"/>
+			<item value="threadCount"/>
 			<item value="HttpProxy"/>
 		</list>
 		<list key="replacehistory">
+			<item value="[-] HttpProxy.HttpProxy():End ID: "/>
+			<item value="[+] HttpProxy.HttpProxy():Start ID: "/>
+			<item value="[+] HttpProxy.HttpProxy():Start ID"/>
+			<item value="[+] HttpProxy.HttpProxy():Start"/>
 		</list>
 	</section>
 </section>

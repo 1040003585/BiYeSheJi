@@ -1,0 +1,22 @@
+[+] HttpProxy.HttpProxy():StartID: 8
+	[+] HTTPSession.run()16
+		[*] HEAD http://ww.fd.comf/ HTTP/1.1
+		[*] Host: ww.fd.comf
+		[*] Proxy-Connection: keep-alive
+		[*] User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+		[*] Accept-Encoding: gzip, deflate, sdch
+		[*] Accept-Language: zh-CN,zh;q=0.8
+		[*] 
+	[-] HTTPSession.run()16
+	[*] ThreadCount:1
+[-] HttpProxy.HttpProxy():End ID : 8
+[+] HttpProxy.HttpProxy():StartID: 8
+	[+] HTTPSession.run()17
+		[*] CONNECT www.google.co.jp:443 HTTP/1.1
+		[*] Host: www.google.co.jp:443
+		[*] Proxy-Connection: keep-alive
+		[*] User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+		[*] 
+	[-] HTTPSession.run()17
+	[*] ThreadCount:1
+		[#] No host of head data
