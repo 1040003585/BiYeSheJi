@@ -10,7 +10,6 @@
 
 ## 代理服务器用法
 ![这里写图片描述](https://github.com/1040003585/BiYeSheJi/blob/master/wu_other_data/pic/1.jpg)
-![这里写图片描述](https://github.com/1040003585/BiYeSheJi/blob/master/wu_other_data/pic/1.jpg)
 ![这里写图片描述](https://github.com/1040003585/BiYeSheJi/blob/master/wu_other_data/pic/2.jpg)
 ![这里写图片描述](https://github.com/1040003585/BiYeSheJi/blob/master/wu_other_data/pic/3.jpg)
 ![这里写图片描述](https://github.com/1040003585/BiYeSheJi/blob/master/wu_other_data/pic/4.jpg)
