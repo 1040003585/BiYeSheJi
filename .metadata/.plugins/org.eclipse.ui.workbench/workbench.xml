@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
 <window height="738" maximized="true" width="1133" x="136" y="-5">
 <fastViewData fastViewLocation="1024"/>
@@ -47,6 +47,10 @@
 </folder>
 </info>
 </editorArea>
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpProxy.java" partName="HttpProxy.java" path="E:/毕业设计/BiYeSheJi/example/src/HttpProxy.java" title="HttpProxy.java" tooltip="example/src/HttpProxy.java" workbook="org.eclipse.ui.internal.EditorStack@ad8f8d">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/example/src/HttpProxy.java"/>
+<editorState selectionLength="8" selectionOffset="3229"/>
+</editor>
 <editor id="org.eclipse.ui.DefaultTextEditor" name="data2.txt" partName="data2.txt" path="E:/毕业设计/BiYeSheJi/developing/src/data2.txt" title="data2.txt" tooltip="developing/src/data2.txt" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/developing/src/data2.txt"/>
 <editorState selectionLength="0" selectionOffset="0"/>
@@ -55,13 +59,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/developing/src/data1.txt"/>
 <editorState selectionLength="0" selectionOffset="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HTTPSession.java" partName="HTTPSession.java" path="E:/毕业设计/BiYeSheJi/developing/src/HTTPSession.java" title="HTTPSession.java" tooltip="developing/src/HTTPSession.java" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HTTPSession.java" partName="HTTPSession.java" path="E:/毕业设计/BiYeSheJi/developing/src/HTTPSession.java" title="HTTPSession.java" tooltip="developing/src/HTTPSession.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/developing/src/HTTPSession.java"/>
-<editorState selectionLength="0" selectionOffset="4134"/>
-</editor>
-<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpProxy.java" partName="HttpProxy.java" path="E:/毕业设计/BiYeSheJi/example/src/HttpProxy.java" title="HttpProxy.java" tooltip="example/src/HttpProxy.java" workbook="org.eclipse.ui.internal.EditorStack@ad8f8d">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/example/src/HttpProxy.java"/>
-<editorState selectionLength="8" selectionOffset="3229"/>
+<editorState selectionLength="0" selectionOffset="0"/>
 </editor>
 </editors>
 <views>
@@ -120,7 +120,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -316,7 +316,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.15662651" ratioLeft="208" ratioRight="1120" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.5415335" ratioLeft="339" ratioRight="287" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
@@ -513,12 +513,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>

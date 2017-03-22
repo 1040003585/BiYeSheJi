@@ -15,11 +15,11 @@ public class HttpProxy {
 				// TODO Auto-generated method stub
 				while (true) {
 					try {
-						System.out.println("[+] HttpProxy.HttpProxy()"
+						System.out.println("[+] HttpProxy.HttpProxy():StartID: "
 								+ myThread.getId());
 						// 等待HTTP会话链接，建立客户端Socket连接
 						new HTTPSession(myServerSocket.accept());
-						System.out.println("[-] HttpProxy.HttpProxy()"
+						System.out.println("[-] HttpProxy.HttpProxy():End ID : "
 								+ myThread.getId());
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
