@@ -5,13 +5,17 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class HTTPSession implements Runnable {
 
 	static long threadCount = 0;
-	private Socket clientSocket;
+	private Socket clientSocket = null;
 	Thread t = null;
+	// HTTP 请求的最大字节数 1024*8=2^13
+	final static int bufsize = 8192;
+	byte[] buf = new byte[bufsize];
+	// Host类实例化对象 
+	Host targethost = null;
 
 	// 接受到客户端Socket s连接
 	public HTTPSession(Socket s) {
@@ -32,75 +36,36 @@ public class HTTPSession implements Runnable {
 			InputStream isInputStream = clientSocket.getInputStream();
 			if (isInputStream == null)
 				return;
-			final int bufsize = 8192;// http请求的最大字节数 1024*8=2^13
-			byte[] buf = new byte[bufsize];
-			int splitheadbyte = 0;
-			int havereadlen = 0;
-			{// region
 
-				// 首次读bufsize大小的isInputStream写到buf
-				int readlen = isInputStream.read(buf, 0, bufsize);
-				while (readlen > 0) {
-					havereadlen += readlen;
-					/* 找Http请求头的结束位置 */
-					splitheadbyte = findHeaderEnd(buf, havereadlen);
-					if (splitheadbyte > 0) {
-						// break while 表示找到请求头结束位置
-						break;
-					}
-					// 读bufsize剩下长度bufsize-havereadlen
-					readlen = isInputStream.read(buf, havereadlen, bufsize
-							- havereadlen);
-					System.out
-							.println("\t\t[*] 读bufsize剩下长度bufsize-havereadlen");
-				}// while
+			// 首次读bufsize大小的isInputStream写到buf
+			int readll = GetHeaderToBuf(isInputStream, bufsize, buf, 0);
 
-				ByteArrayInputStream bais = new ByteArrayInputStream(buf, 0,
-						havereadlen);
-				InputStreamReader isr = new InputStreamReader(bais);
-				BufferedReader br = new BufferedReader(isr);
+			// 构建读取头输入流
+			ByteArrayInputStream bais = new ByteArrayInputStream(buf, 0, readll);
+			InputStreamReader isr = new InputStreamReader(bais);
+			BufferedReader br = new BufferedReader(isr);
 
-				/* Host类实例化对象 */
-				Host targethost = new Host();
-				{// Host
-					String headdataline = null;
-					boolean flag = false;
-					// 从请求头流读取数据
-					while ((headdataline = br.readLine()) != null) {
-						if (headdataline.toLowerCase().startsWith("host:")) {
-							targethost.host = headdataline;
-							flag = true;
-						}
-						// 输出请求头信息如data1.txt
-						System.out.println("\t\t[*] " + headdataline);
-					}// while
-					// 请求头的流数据如果没有Host信息
-					if (!flag) {
-						clientSocket.getOutputStream().write(
-								"error!".getBytes());
-						clientSocket.close();
-						System.out.println("\t\t[#] No host of head data");
-						return;
-					}
-					// 根据主机信息，计算出IP地址和端口号
-					targethost.cal();
-					System.out.println("\t\t[+] Address:[" + targethost.address
-							+ "]Port:" + targethost.port);
-					System.out.println("\t\t[+] Pipe Start: -----------------");
-					// 客户端请求链接中转管道
-					try {
-						pipe(buf, havereadlen, clientSocket.getInputStream(),
-								clientSocket.getOutputStream(), targethost);
-					} catch (Exception e) {
-						System.out.println("\t\t[#] Pipe Run Exception!"
-								+ e.toString());
-						// e.printStackTrace();// print red color
-					}
-					System.out.println("\t\t[-] Address:[" + targethost.address
-							+ "]Port:" + targethost.port);
-					System.out.println("\t\t[-] Pipe End  : -----------------");
-				}// Host
-			}// region
+			// 从请求头流读取数据
+			targethost = new Host();
+			ReadHeaderData(br, targethost);
+
+			// 根据主机信息，计算出IP地址和端口号
+			targethost.cal();
+			System.out.println("\t\t[+] Address:[" + targethost.address
+					+ "]Port:" + targethost.port);
+
+			// 客户端请求链接中转管道
+			System.out.println("\t\t[+] Pipe Start: -----------------");
+			try {
+				Pipe(buf, readll, clientSocket.getInputStream(), clientSocket
+						.getOutputStream(), targethost);
+			} catch (Exception e) {
+				System.out.println("\t\t[#] Pipe Exception!" + e.toString());
+				// e.printStackTrace();// print red color
+			}
+			System.out.println("\t\t[-] Address:[" + targethost.address
+					+ "]Port:" + targethost.port);
+			System.out.println("\t\t[-] Pipe End  : -----------------");
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -111,29 +76,94 @@ public class HTTPSession implements Runnable {
 	}// run()
 
 	/**
+	 * // 从请求头流读取数据
+	 * 
+	 * @param br
+	 * @param targethost
+	 * @throws IOException
+	 */
+	private void ReadHeaderData(BufferedReader br, Host targethost)
+			throws IOException {
+		String headdataline = null;
+		boolean flag = false;
+		while ((headdataline = br.readLine()) != null) {
+			if (headdataline.toLowerCase().startsWith("host:")) {
+				targethost.host = headdataline;
+				flag = true;
+			}
+			// 输出请求头信息如data1.txt
+			System.out.println("\t\t[*] " + headdataline);
+		}// while
+		// 请求头的流数据如果没有Host信息
+		if (!flag) {
+			clientSocket.getOutputStream().write("error!".getBytes());
+			clientSocket.close();
+			System.out.println("\t\t[#] No host of head data");
+			return;
+		}
+	}
+
+	/**
+	 * // 首次读bufsize大小的isInputStream写到buf
+	 * 
+	 * @param isInputStream
+	 * @param bufsize
+	 * @param buf
+	 * @param readll
+	 * @return
+	 * @throws IOException
+	 */
+	private int GetHeaderToBuf(InputStream isInputStream, final int bufsize,
+			byte[] buf, int readll) throws IOException {
+		int splitheadbyte = 0;
+		int readl = isInputStream.read(buf, 0, bufsize);
+		while (readl > 0) {
+			readll += readl;
+			/* 找Http请求头的结束位置 */
+			splitheadbyte = FindHeaderEnd(buf, readll);
+			if (splitheadbyte > 0) {
+				// break while 表示找到请求头结束位置
+				break;
+			}
+			// 读buf剩下长度bufsize - readll
+			readl = isInputStream.read(buf, readll, bufsize - readll);
+			System.out.println("\t\t[*] 读bufsize剩下长度bufsize-havereadlen");
+		}// while
+		return readll;
+
+	}
+
+	/**
 	 * 找Http请求头的结束位置
-	 **/
-	private int findHeaderEnd(final byte[] buf, int rlen) {
+	 * 
+	 * @param buf
+	 * @param readll
+	 * @return
+	 */
+	private int FindHeaderEnd(final byte[] buf, int readll) {
 		int splitbyte = 0;
-		while (splitbyte + 3 < rlen) {
+		while (splitbyte + 3 < readll) {
 			if (buf[splitbyte] == '\r' && buf[splitbyte + 1] == '\n'
 					&& buf[splitbyte + 2] == '\r' && buf[splitbyte + 3] == '\n') {
 				// 报文首部与报文主体有一个空行（CR+LF）
 				return splitbyte + 4;
 			}
-
 			splitbyte++;
 		}
 		return 0;
 	}
 
 	/**
-	 * 客户端请求链接中转管道
+	 * // 客户端请求链接中转管道
 	 * 
+	 * @param requesthead
+	 * @param requestLen
+	 * @param clientIS
+	 * @param clientOS
+	 * @param targethost
 	 * @throws IOException
-	 * @throws UnknownHostException
 	 */
-	void pipe(byte[] requesthead, int requestLen, InputStream clientIS,
+	void Pipe(byte[] requesthead, int requestLen, InputStream clientIS,
 			OutputStream clientOS, Host targethost) throws IOException {
 		byte bytes[] = new byte[1024 * 32];
 		// 建立目标Socket和目标输出流和目标输入流
@@ -157,7 +187,7 @@ public class HTTPSession implements Runnable {
 						clientOS.write(bytes, 0, resultLen);
 					}
 				} catch (Exception e) {
-					System.out.println("\t\t\t[#] Target Socket exception:"
+					System.out.println("\t\t\t[#] Target Socket Exception: "
 							+ e.toString());
 				}
 				System.out
