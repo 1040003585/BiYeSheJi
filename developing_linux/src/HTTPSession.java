@@ -11,17 +11,17 @@ public class HTTPSession implements Runnable {
 	static long threadCount = 0;
 	private Socket clientSocket = null;
 	Thread t = null;
-	// HTTP ���������ֽ��� 1024*8=2^13
+	// HTTP 请求的最大字节数 1024*8=2^13
 	final static int bufsize = 8192;
 	byte[] buf = new byte[bufsize];
-	// Host��ʵ��������
+	// Host类实例化对象
 	Host targethost = null;
 
-	// ���ܵ��ͻ���Socket s����
+	// 接受到客户端Socket s连接
 	public HTTPSession(Socket s) {
 		// TODO Auto-generated constructor stub
 		clientSocket = s;
-		// Ϊ�ôλỰ����һ��Daemon�߳�
+		// 为该次会话建立一个Daemon线程
 		t = new Thread(this);
 		t.setDaemon(true);
 		t.start();
@@ -37,24 +37,24 @@ public class HTTPSession implements Runnable {
 			if (isInputStream == null)
 				return;
 
-			// �״ζ�bufsize��С��isInputStreamд��buf
+			// 首次读bufsize大小的isInputStream写到buf
 			int readll = GetHeaderToBuf(isInputStream, bufsize, buf, 0);
 
-			// ������ȡͷ������
+			// 构建读取头输入流
 			ByteArrayInputStream bais = new ByteArrayInputStream(buf, 0, readll);
 			InputStreamReader isr = new InputStreamReader(bais);
 			BufferedReader br = new BufferedReader(isr);
 
-			// ������ͷ����ȡ����
+			// 从请求头流读取数据
 			targethost = new Host();
 			ReadHeaderData(br, targethost);
 
-			// ����������Ϣ�������IP��ַ�Ͷ˿ں�
+			// 根据主机信息，计算出IP地址和端口号
 			targethost.cal();
 			System.out.println("\t\t[+] Address:[" + targethost.address
 					+ "]Port:" + targethost.port);
 
-			// �ͻ�������������ת�ܵ�
+			// 客户端请求链接中转管道
 			System.out.println("\t\t[+] Pipe Start: -----------------");
 			try {
 				Pipe(buf, readll, clientSocket.getInputStream(),
@@ -76,7 +76,7 @@ public class HTTPSession implements Runnable {
 	}// run()
 
 	/**
-	 * // ������ͷ����ȡ����
+	 * // 从请求头流读取数据
 	 * 
 	 * @param br
 	 * @param targethost
@@ -91,10 +91,10 @@ public class HTTPSession implements Runnable {
 				targethost.host = headdataline;
 				flag = true;
 			}
-			// �������ͷ��Ϣ��data1.txt
+			// 输出请求头信息如data1.txt
 			System.out.println("\t\t[*] " + headdataline);
 		}// while
-			// ����ͷ�����������û��Host��Ϣ
+			// 请求头的流数据如果没有Host信息
 		if (!flag) {
 			clientSocket.getOutputStream().write("error!".getBytes());
 			clientSocket.close();
@@ -104,7 +104,7 @@ public class HTTPSession implements Runnable {
 	}
 
 	/**
-	 * // �״ζ�bufsize��С��isInputStreamд��buf
+	 * // 首次读bufsize大小的isInputStream写到buf
 	 * 
 	 * @param isInputStream
 	 * @param bufsize
@@ -119,22 +119,22 @@ public class HTTPSession implements Runnable {
 		int readl = isInputStream.read(buf, 0, bufsize);
 		while (readl > 0) {
 			readll += readl;
-			/* ��Http����ͷ�Ľ���λ�� */
+			/* 找Http请求头的结束位置 */
 			splitheadbyte = FindHeaderEnd(buf, readll);
 			if (splitheadbyte > 0) {
-				// break while ��ʾ�ҵ�����ͷ����λ��
+				// break while 表示找到请求头结束位置
 				break;
 			}
-			// ��bufʣ�³���bufsize - readll
+			// 读buf剩下长度bufsize - readll
 			readl = isInputStream.read(buf, readll, bufsize - readll);
-			System.out.println("\t\t[*] ��bufsizeʣ�³���bufsize-havereadlen");
+			System.out.println("\t\t[*] 读bufsize剩下长度bufsize-havereadlen");
 		}// while
 		return readll;
 
 	}
 
 	/**
-	 * ��Http����ͷ�Ľ���λ��
+	 * 找Http请求头的结束位置
 	 * 
 	 * @param buf
 	 * @param readll
@@ -145,7 +145,7 @@ public class HTTPSession implements Runnable {
 		while (splitbyte + 3 < readll) {
 			if (buf[splitbyte] == '\r' && buf[splitbyte + 1] == '\n'
 					&& buf[splitbyte + 2] == '\r' && buf[splitbyte + 3] == '\n') {
-				// �����ײ��뱨��������һ�����У�CR+LF��
+				// 报文首部与报文主体有一个空行（CR+LF）
 				return splitbyte + 4;
 			}
 			splitbyte++;
@@ -154,7 +154,7 @@ public class HTTPSession implements Runnable {
 	}
 
 	/**
-	 * // �ͻ�������������ת�ܵ�
+	 * // 客户端请求链接中转管道
 	 * 
 	 * @param requesthead
 	 * @param requestLen
@@ -166,7 +166,7 @@ public class HTTPSession implements Runnable {
 	void Pipe(byte[] requesthead, int requestLen, InputStream clientIS,
 			OutputStream clientOS, Host targethost) throws IOException {
 		byte bytes[] = new byte[1024 * 32];
-		// ����Ŀ��Socket��Ŀ���������Ŀ��������
+		// 建立目标Socket和目标输出流和目标输入流
 		Socket targetsocket = new Socket(targethost.address, targethost.port);
 		targetsocket.setSoTimeout(3000);
 		OutputStream targetOS = targetsocket.getOutputStream();
@@ -176,14 +176,14 @@ public class HTTPSession implements Runnable {
 				System.out
 						.println("\t\t\t[+] Proxy requset-connect Start , Target Socket: "
 								+ targetsocket.hashCode());
-				// ��Ŀ��Socket�������д������ͷ
+				// 向目标Socket的输出流写入请求头
 				targetOS.write(requesthead, 0, requestLen);
 				int resultLen = 0;
 				try {
 					while ((resultLen = targetIS.read(bytes)) != -1
 							&& !clientSocket.isClosed()
 							&& !targetsocket.isClosed()) {
-						// ����Ŀ�������������ͻ���Socketд��
+						// 请求到目标的正文向输出客户端Socket写入
 						clientOS.write(bytes, 0, resultLen);
 					}
 				} catch (Exception e) {

@@ -1,5 +1,5 @@
 /**
- * Ŀ��������Ϣ
+ * [*] Host: www.baidu.com:443
  * 
  * @author wu_being
  * 
@@ -19,7 +19,7 @@ final public class Host {
 			return false;
 		}
 		int next = host.indexOf(':', start + 2);// 127
-		if (next == -1) {// localhost: 127.0.0.1 �Ҳ���port
+		if (next == -1) {// localhost: 127.0.0.1 , not port
 			port = 80;
 			address = host.substring(start + 2);// 127.0.0.1
 		} else {
